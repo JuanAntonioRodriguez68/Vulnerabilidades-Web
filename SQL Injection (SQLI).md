@@ -31,9 +31,6 @@ SQL Injection (SQLi) es una vulnerabilidad que permite a los atacantes ejecutar 
     sqlmap -u "http://example.com/index.php?id=1" --dbs
     ```
 
-- **Commix:**  
-  Herramienta para la explotación de inyecciones de comandos, que también puede identificar y explotar SQLi.
-
 - **Metasploit:**  
   Framework que incluye módulos específicos para explotar SQL Injection.
 
