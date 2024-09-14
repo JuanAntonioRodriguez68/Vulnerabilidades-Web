@@ -17,6 +17,38 @@ SQL Injection (SQLi) es una vulnerabilidad que permite a los atacantes ejecutar 
 
 ---
 
+**Tipos de SQL Injection:**
+
+1. **Inyección Basada en Error**  
+   Los atacantes inducen errores en la base de datos para obtener información sobre la estructura de la base de datos.
+   
+   - **Ejemplo:** `http://example.com/index.php?id=1' AND 1=CONVERT(int, (SELECT @@version))--`
+
+2. **Inyección Ciega**  
+   Cuando la aplicación no muestra mensajes de error, los atacantes infieren la estructura de la base de datos mediante la observación de las respuestas de la aplicación.
+   
+   - **Ejemplo:** `http://example.com/index.php?id=1' AND IF(1=1, SLEEP(5), 0)--`
+
+3. **Inyección SQL Basada en Tiempo**  
+   Utiliza funciones que hacen que la base de datos se demore intencionalmente para inferir la existencia de datos.
+   
+   - **Ejemplo:** `http://example.com/index.php?id=1' AND IF(1=1, SLEEP(5), 0)--`
+
+4. **Inyección SQL Unitaria**  
+   Añade o modifica una consulta SQL existente usando una sola línea de inyección.
+   
+   - **Ejemplo:** `http://example.com/index.php?id=1' UNION SELECT null, username, password FROM users--`
+
+5. **Inyección SQL de Unión**  
+   Utiliza la cláusula `UNION` para combinar resultados de múltiples consultas SQL.
+   
+   - **Ejemplo:** `http://example.com/index.php?id=1' UNION SELECT null, username, password FROM users--`
+
+6. **Inyección SQL de Inferencia**  
+   También conocida como Blind SQL Injection, se basa en la respuesta del sistema para inferir información sobre la base de datos.
+
+---
+
 ## **Herramientas para Explotar SQL Injection**
 
 - **Burp Suite:**  
