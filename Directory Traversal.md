@@ -1,4 +1,4 @@
-# **Directory Traversal (Traversal de Directorios)**
+# **Directory Traversal**
 
 **Descripción:**  
 Directory Traversal es una vulnerabilidad que permite a los atacantes acceder a archivos y directorios fuera del directorio raíz de la aplicación web. Esto se logra manipulando parámetros en la URL o en las solicitudes para navegar por la estructura de directorios del servidor.
