@@ -65,4 +65,3 @@ Mitigación de SQL Injection
 
     Limitar privilegios: Configura los permisos de la base de datos de manera que el usuario de la aplicación tenga los menores privilegios necesarios para operar.
 
-
